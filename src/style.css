@@ -1,0 +1,143 @@
+:root {
+    --color-primary: hsl(25, 97%, 53%);
+    --color-neutral-100: hsl(0, 0%, 100%);
+    --color-neutral-200: hsl(217, 12%, 63%);
+    --color-neutral-300: hsl(216, 12%, 54%);
+    --color-neutral-600: hsl(213, 19%, 24%);
+    --color-neutral-700: hsl(213, 19%, 18%);
+    --color-neutral-800: hsl(216, 12%, 8%);
+    --color-neutral-900: hsl(220, 10%, 3%);
+
+    --fs-small: 0.9375rem;
+    --fs-large: 1.75rem;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --container-size: 28em;
+    --circle-size: 3rem
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--color-neutral-900);
+}
+
+h1 {
+    color: var(--color-neutral-100);
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
+    margin-top: 2rem;
+}
+
+p {
+    color: var(--color-neutral-300);
+    font-size: var(--fs-small);
+    margin-top: 0.5rem;
+}
+
+button {
+    font-size: var(--fs-small);
+    line-height: 1;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.container {
+    background: linear-gradient(var(--color-neutral-700), var(--color-neutral-800));
+    width: var(--container-size);
+    height: var(--container-size);
+    border-radius: 2.5rem;
+    padding: 3rem;
+    margin: 2rem;
+}
+
+.container--not-showing {
+    display: none;
+}
+
+.rating-button,
+.star {
+    border-radius: 100%;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: var(--color-neutral-600);
+}
+
+.selection-message {
+    font-size: var(--fs-small);
+    color: var(--color-primary);
+    background-color: var(--color-neutral-600);
+    border-radius: 2rem;
+    padding: 0.3rem 1.25rem;
+    margin-top: 2rem;
+}
+
+.rating-button {
+    color: var(--color-neutral-300);
+    text-align: center;
+}
+
+.rating-button:hover {
+    color: var(--color-neutral-100);
+    background-color: var(--color-primary);
+}
+
+.rating-button--clicked {
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-200);
+}
+
+.rating-range {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 1.5rem;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button {
+    width: 100%;
+    border-radius: 2.5rem;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--color-neutral-100);
+    background-color: var(--color-primary);
+}
+
+.submit-button:hover {
+    background-color: var(--color-neutral-100);
+    color: var(--color-primary);
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .submit-button {
+        padding: 1rem;
+    }
+
+    :root {
+        --circle-size: 2.8rem;
+    }
+}
